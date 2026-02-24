@@ -38,6 +38,8 @@
 
 #ifdef __cplusplus
 
+using float16_t = mesa::float16_t;
+
 /**
  * \defgroup IR Intermediate representation nodes
  *
