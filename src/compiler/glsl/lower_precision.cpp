@@ -25,6 +25,7 @@
  * \file lower_precision.cpp
  */
 
+#include <vector>
 #include "main/macros.h"
 #include "compiler/glsl_types.h"
 #include "ir.h"
@@ -34,7 +35,6 @@
 #include "util/half_float.h"
 #include "util/set.h"
 #include "util/hash_table.h"
-#include <vector>
 
 namespace {
 
