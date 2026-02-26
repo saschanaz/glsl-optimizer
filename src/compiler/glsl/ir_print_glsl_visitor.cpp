@@ -22,7 +22,6 @@
  */
 
 #include <math.h>
-#include <limits>
 #include "ir_print_glsl_visitor.h"
 #include "ir_visitor.h"
 #include "glsl_types.h"
@@ -1457,10 +1456,10 @@ void print_float (string_buffer& buffer, float f)
 
 	// snprintf formats infinity as inf.0 or -inf.0, which isn't useful here.
 	// GLSL has no infinity constant so print an equivalent expression instead.
-	if (f == std::numeric_limits<float>::infinity())
+	if (f == INFINITY)
 		strcpy(tmp, "(1.0/0.0)");
 
-	if (f == -std::numeric_limits<float>::infinity())
+	if (f == -INFINITY)
 		strcpy(tmp, "(-1.0/0.0)");
 
 	// Do similar thing for NaN
